@@ -11,6 +11,11 @@
     <tr *ngFor="let student of students">
       <td>{{ student.name }}</td>
       <td>{{ student.email }}</td>
+      <td> <button class="btn btn-primary" (click)="viewStudent(student.id)">View Details</button></td>
     </tr>
   </tbody>
 </table>
+
+<div>
+  <button type="button" class="btn btn-success" (click)="addStudentButton()">Add Student</button>
+</div>
