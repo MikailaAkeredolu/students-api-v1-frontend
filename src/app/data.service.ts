@@ -27,6 +27,15 @@ export class DataService {
     return this.http.get<Student>(`http://localhost:8080/api/v1/students/${id}`);
   }
 
+  //Delete a stubet by ID
+  deleteStudent(id: number):Observable<any>{
+    return this.http.delete<any>(`http://localhost:8080/api/v1/students/${id}`);
+  }
+
+  editStudent(id:number, student: Student):Observable<Student>{
+      return this.http.put<Student>(`http://localhost:8080/api/v1/students/${id}`, student);
+  }
+
 
 
 }

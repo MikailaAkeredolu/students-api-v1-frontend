@@ -37,6 +37,20 @@ students: Student[];
     this.router.navigate(['view-student', id]); // view-student/:id
   }
 
+  deleteStudent(id: number){
+    this.data.deleteStudent(id).subscribe(
+      //refresh the page or navigate
+      response =>{
+        this.getAllStudents();
+      }
+
+    );
+  }
+
+  editStudent(id:number){
+    this.router.navigate(['edit-student', id]);
+  }
+
 
 
 

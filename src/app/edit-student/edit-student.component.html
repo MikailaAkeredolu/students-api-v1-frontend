@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Edit Student View</h1>
+  <form (ngSubmit)="updateStudentButton(student.id, student)">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input
+        type="number"
+        class="form-control"
+        required
+        [(ngModel)]="student.id"
+        name="id"
+        disabled
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="name"> Name</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        [(ngModel)]="student.name"
+        name="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email"> Email</label>
+      <input
+        type="email"
+        class="form-control"
+        required
+        [(ngModel)]="student.email"
+        name="email"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-warning">Update</button>
+  </form>
+</div>

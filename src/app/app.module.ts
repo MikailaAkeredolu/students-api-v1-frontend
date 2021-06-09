@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { FormsModule } from '@angular/forms';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { EditStudentComponent } from './edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     AddStudentComponent,
-    ViewStudentComponent
+    ViewStudentComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,

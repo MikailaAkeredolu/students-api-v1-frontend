@@ -11,11 +11,24 @@
     <tr *ngFor="let student of students">
       <td>{{ student.name }}</td>
       <td>{{ student.email }}</td>
-      <td> <button class="btn btn-primary" (click)="viewStudent(student.id)">View Details</button></td>
+      <td>
+        <button class="btn btn-primary" (click)="viewStudent(student.id)">
+          View Details</button
+        ><button class="btn btn-danger" (click)="deleteStudent(student.id)">
+          Delete
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-warning" (click)="editStudent(student.id)">
+          Edit
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
 
 <div>
-  <button type="button" class="btn btn-success" (click)="addStudentButton()">Add Student</button>
+  <button type="button" class="btn btn-success" (click)="addStudentButton()">
+    Add Student
+  </button>
 </div>
